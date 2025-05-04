@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Text } from '@radix-ui/themes';
 import styles from './page.module.css';
+import { getPublicPath } from '../utils';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           </Button>
         </Flex>
         <div className={styles.heroImage}>
-        
+          <img src={getPublicPath('/headshot.jpeg')} alt="Anne Pawlak" />
         </div>
         </Flex>
     </section>

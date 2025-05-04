@@ -11,6 +11,7 @@ const fraunces = Fraunces({
 
 
 import '../styles/globals.css';
+import { getPublicPath } from '../utils';
 
 export const metadata: Metadata = {
   title: 'Anne Pawlak',
@@ -28,6 +29,7 @@ export default function RootLayout({
         <style>{`
           :root {
             --fraunces: ${fraunces.style.fontFamily};
+            --bg_blob: url(${getPublicPath('/bg_blob.png')});
           }
         `}</style>
       </head>
@@ -51,7 +53,9 @@ export default function RootLayout({
                 </Button>
               </nav>
             </header>
-            <Heading as="h1" className={styles.logo}></Heading>
+            <Heading as="h1" className={styles.logo}>
+            <img src={getPublicPath('/logo.png')} alt="Anne Pawlak" />
+            </Heading>
             {children}
           </Container>
         </Theme>

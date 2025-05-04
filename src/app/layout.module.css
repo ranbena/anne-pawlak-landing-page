@@ -4,13 +4,15 @@
 }
 
 .blob {
-    background-image: url('/bg_blob.png');
-    background-size: 80% auto;
-    background-position: right top;
+    background-image: var(--bg_blob);
+    background-size: 60% auto;
+    background-position: 0 0;
     background-repeat: no-repeat;
 
     position: absolute;
     inset: 0;
+    inset-inline-start: -900px;
+    inset-block-start: -300px;
     z-index: -1;
 
     transform: scaleX(-1);
@@ -47,10 +49,13 @@
 }
 
 .logo {
-    margin-block-start: -48px;
-    width: 100px;
-    height: 100px;
-    white-space: nowrap;
-    border-radius: 50%;
-    background-color: var(--gray-12);
+    margin-block-start: -84px;
+    width: 130px;
+    height: 130px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
