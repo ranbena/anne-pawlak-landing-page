@@ -43,13 +43,13 @@ export default function RootLayout({
                   <a href="/#about">About</a>
                 </Button>
                 <Button asChild variant="ghost" size="4" color="gray" highContrast>
-                  <a href="/#offer">Angebot</a>
+                  <a href="/#angebot">Angebot</a>
                 </Button>
                 <Button asChild variant="ghost" size="4" color="gray" highContrast>
-                  <a href="/#work-with-me">Arbeite mit mir</a>
+                  <a href="/#kontakt">Kontakt</a>
                 </Button>
                 <Button asChild variant="solid" radius="full" size="4">
-                  <a href="/#start">Für 0 € loslegen</a>
+                  <a href="/#loslegen">Für 0 € loslegen</a>
                 </Button>
               </nav>
             </header>
