@@ -15,9 +15,7 @@
 
 # next.js
 /.next/
-
-# The `out` directory should not be ignored by version control
-# /out/
+/out/
 
 # production
 /build
