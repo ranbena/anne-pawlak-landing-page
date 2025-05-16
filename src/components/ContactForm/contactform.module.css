@@ -12,12 +12,12 @@
   width: 100%;
 }
 
-& fieldset {
+.form fieldset {
   border: 0;
   padding: 0;
 }
 
-& legend {
+.form legend {
   margin-bottom: 10px;
   color: #3240a6;
   font-size: 12px;
