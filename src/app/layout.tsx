@@ -1,6 +1,4 @@
-import { Button, Container, Heading, Theme } from '@radix-ui/themes';
 import type { Metadata } from 'next';
-import styles from './layout.module.css';
 
 import { Fraunces } from 'next/font/google';
 
@@ -9,9 +7,9 @@ const fraunces = Fraunces({
   display: 'swap',
 });
 
-
 import '../styles/globals.css';
 import { getPublicPath } from '../utils';
+import ClientLayout from './_clientLayout';
 
 export const metadata: Metadata = {
   title: 'Anne Pawlak',
@@ -34,31 +32,7 @@ export default function RootLayout({
         `}</style>
       </head>
       <body>
-        <Theme accentColor="red" grayColor="gray">
-          <Container size="4" className={styles.container}>
-            <div className={styles.blob} />
-            <header className={styles.header}>
-              <nav>
-                <Button asChild variant="ghost" size="4" color="gray" highContrast>
-                  <a href="/#about">About</a>
-                </Button>
-                <Button asChild variant="ghost" size="4" color="gray" highContrast>
-                  <a href="/#angebot">Angebot</a>
-                </Button>
-                <Button asChild variant="ghost" size="4" color="gray" highContrast>
-                  <a href="/#kontakt">Kontakt</a>
-                </Button>
-                <Button asChild variant="solid" radius="full" size="4">
-                  <a href="/#loslegen">Für 0 € loslegen</a>
-                </Button>
-              </nav>
-            </header>
-            <Heading as="h1" className={styles.logo}>
-            <img src={getPublicPath('/logo.png')} alt="Anne Pawlak" />
-            </Heading>
-            {children}
-          </Container>
-        </Theme>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

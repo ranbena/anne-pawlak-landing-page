@@ -1,0 +1,89 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: fixed;
+  inset: 0;
+
+  &[data-state='open'] {
+    animation: overlayShow 300ms ease;
+  }
+
+  &[data-state='closed'] {
+    animation: overlayHide 200ms ease;
+  }
+}
+
+.content {
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  height: 100vh;
+  width: 85vw;
+  padding: 25px;
+  transform-origin: left;
+  overflow: scroll;
+
+  inset: 0 auto 0 0;
+
+  &:has(.header) {
+    padding-top: 0;
+  }
+
+  &[data-state='open'] {
+    animation: contentShow 300ms ease;
+  }
+
+  &[data-state='closed'] {
+    animation: contentHide 200ms ease;
+  }
+}
+
+.content:focus {
+  outline: none;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0.7;
+    translate: -100% 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes contentHide {
+  from {
+    opacity: 1;
+    translate: 0 0;
+  }
+  to {
+    opacity: 0.7;
+    translate: -100% 0;
+  }
+}

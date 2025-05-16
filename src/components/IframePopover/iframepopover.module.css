@@ -1,0 +1,32 @@
+.content {
+  opacity: 0;
+  content-visibility: hidden;
+  translate: 0 20px;
+  transition:
+    opacity 0.1s ease-in-out,
+    translate 0.1s ease-in-out,
+    content-visibility 0.1s ease-in-out allow-discrete;
+  pointer-events: none;
+  background-color: #f6f6f6;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.open {
+  opacity: 1;
+  content-visibility: visible;
+  translate: 0 0;
+  pointer-events: auto;
+}
+
+.trigger {
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}

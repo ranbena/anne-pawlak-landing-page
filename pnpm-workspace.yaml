@@ -1,0 +1,2 @@
+patchedDependencies:
+  '@radix-ui/react-slot@1.2.2': patches/@radix-ui__react-slot@1.2.2.patch

@@ -1,7 +1,49 @@
 @import './radix-ui.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background);
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  margin-block: 0;
+}
+
+h1 {
+  color: var(--red-9);
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 43px;
+  }
+}
+
+h3 {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 }

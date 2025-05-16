@@ -1,0 +1,118 @@
+'use client';
+
+import { Button, Grid, Select, TextArea, TextField } from '@radix-ui/themes';
+import { SendHorizontalIcon } from 'lucide-react';
+import { useCallback, useState } from 'react';
+
+import IframePopover from '../IframePopover';
+import styles from './contactform.module.css';
+
+const formId = '1FAIpQLSfkHixpm61i87K7pixgulqV99z0QMplcLD5C0QcP-T3cBwNyQ';
+const googleFormUrl = `https://docs.google.com/forms/u/0/d/e/${formId}/formResponse`;
+
+const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showIframe, setShowIframe] = useState(false);
+
+  const onSubmit = useCallback(() => {
+    setIsSubmitting(true);
+  }, []);
+
+  const onIframeLoad = useCallback(() => {
+    setIsSubmitting(false);
+    setShowIframe(true);
+  }, []);
+
+  return (
+    <Grid
+      columns={{
+        initial: '1',
+        md: '2',
+      }}
+      gap="4"
+    >
+      <h3 className={styles.heroHeading}>Du hast eine Frage oder möchtest zusammenarbeiten?</h3>
+      <div className={styles.root}>
+        <form action={googleFormUrl} onSubmit={onSubmit} className={styles.form} id="contact-form">
+          <TextField.Root
+            type="text"
+            name="entry.760257597"
+            placeholder="NAME"
+            required
+            variant="soft"
+            size="3"
+          />
+          <TextField.Root
+            type="email"
+            name="entry.2103074590"
+            placeholder="EMAIL"
+            required
+            variant="soft"
+            size="3"
+          />
+          <TextField.Root
+            type="text"
+            name="entry.1652608311"
+            placeholder="WEBSITE"
+            variant="soft"
+            size="3"
+          />
+          <TextField.Root
+            type="text"
+            name="entry.62845363"
+            placeholder="SOCIAL MEDIA HANDLE"
+            variant="soft"
+            size="3"
+          />
+          <Select.Root name="entry.1036041765" required size="3">
+            <Select.Trigger placeholder="HERAUSFORDERUNG" variant="soft" />
+            <Select.Content position="popper" variant="soft">
+              <Select.Item value="Exposure">Sichtbar werden</Select.Item>
+              <Select.Item value="Growth">Mehr Wachstum</Select.Item>
+              <Select.Item value="Sales">Verkaufen</Select.Item>
+              <Select.Item value="All">Etwas von Allem</Select.Item>
+            </Select.Content>
+          </Select.Root>
+          <Select.Root name="entry.892576425" required size="3">
+            <Select.Trigger placeholder="DEIN BUDGET" variant="soft" />
+            <Select.Content position="popper" variant="soft">
+              <Select.Item value="100">Bis zu 100€</Select.Item>
+              <Select.Item value="500">100 - 500€</Select.Item>
+              <Select.Item value="1000">500 - 1000€</Select.Item>
+              <Select.Item value="Above">Über 1000€</Select.Item>
+            </Select.Content>
+          </Select.Root>
+          <TextArea
+            className={styles.textarea}
+            name="entry.1595123500"
+            placeholder="ICH MELD MICH HEUT BEI DIR WEIL..."
+            variant="soft"
+            size="3"
+          />
+        </form>
+        <Button
+          className={styles.button}
+          size="3"
+          type="submit"
+          loading={isSubmitting}
+          form="contact-form"
+          formTarget="google-form-iframe"
+          radius="full"
+        >
+          <SendHorizontalIcon />
+          Hier loslegen!
+        </Button>
+        <IframePopover isOpen={showIframe} close={() => setShowIframe(false)}>
+          <iframe
+            src="about:blank"
+            name="google-form-iframe"
+            onLoad={onIframeLoad}
+            className={styles.iframe}
+          />
+        </IframePopover>
+      </div>
+    </Grid>
+  );
+};
+
+export default ContactForm;

@@ -1,17 +1,18 @@
-
 @import '@radix-ui/themes/styles.css';
 
 .rt-Button {
   font-weight: 600;
 }
 
-.radix-themes {
-  background-color: transparent;
+div[data-radix-popper-content-wrapper] {
+  pointer-events: none;
 }
 
-:root, .radix-themes {
-    --color-background: #fff9ee;
-    --heading-font-family: var(--fraunces);
+:root,
+.radix-themes {
+  --color-background: #fff9ee;
+  --heading-font-family: var(--fraunces);
+  --cursor-button: pointer;
 }
 
 :root {

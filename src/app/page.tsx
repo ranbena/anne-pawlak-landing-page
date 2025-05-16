@@ -1,28 +1,22 @@
-import { Button, Flex, Heading, Text } from '@radix-ui/themes';
+'use client';
+
+import { Flex, Section } from '@radix-ui/themes';
+import ContactForm from '../components/ContactForm';
+import Hero from '../components/Hero';
 import styles from './page.module.css';
-import { getPublicPath } from '../utils';
 
 export default function Home() {
   return (
-    <section className={styles.hero}>
-      <Flex direction="row" gap="4">
-        <Flex direction="column" gap="6">
-          <Heading as="h2" className={styles.heroHeading}>
-            Verwandle deine <span>Online-Präsenz</span> in ein Online Business.
-          </Heading>
-          <Text className={styles.heroText}>
-            Für Künstler, Designer und Creators.
-            <br />
-            Verwandel <span>‘<strong>Likes und Follows</strong>’</span> zu <span>‘<strong>Klicks und Verkäufe</strong>‘</span>
-          </Text>
-          <Button asChild variant="solid" radius="full" size="4" className={styles.heroButton}>
-            <a href="/#start">Hier loslegen!</a>
-          </Button>
+    <div className={styles.root}>
+      <Section>
+        <Hero />
+      </Section>
+      <Section>
+        <Flex direction="column" gap="4">
+          <h1 id="kontakt">Kontakt</h1>
+          <ContactForm />
         </Flex>
-        <div className={styles.heroImage}>
-          <img src={getPublicPath('/headshot.jpeg')} alt="Anne Pawlak" />
-        </div>
-        </Flex>
-    </section>
+      </Section>
+    </div>
   );
 }

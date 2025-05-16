@@ -1,48 +1,5 @@
-.hero {
-    margin-top: 80px;
-}
-
-.heroHeading {
-    font-size: 48px;
-    line-height: 1.2;
-    font-weight: 700;
-
-    span {
-        display: inline-block;
-    }
-}
-
-.heroText {
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 300;
-    text-transform: uppercase;
-
-    strong {
-        font-weight: 600;
-    }
-
-    span {
-        display: inline-block;
-    }
-}
-
-.heroButton {
-    width: fit-content;
-    text-transform: uppercase;
-    padding-inline: var(--space-8);
-}
-
-.heroImage {
-    background-color: var(--gray-12);
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.root {
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
 }
