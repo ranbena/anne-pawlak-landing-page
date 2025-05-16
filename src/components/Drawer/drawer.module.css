@@ -42,10 +42,10 @@
   outline: none;
 }
 
-.closeBtn {
+button.closeBtn {
   position: absolute;
-  top: 17px;
-  right: 17px;
+  inset-block-start: 17px;
+  inset-inline-end: 17px;
 }
 
 @keyframes overlayShow {

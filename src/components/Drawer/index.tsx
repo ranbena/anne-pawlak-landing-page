@@ -49,8 +49,8 @@ export const DrawerContent = ({
       <Dialog.Overlay className={styles.overlay} />
       <Dialog.Content className={clsx(styles.content, className)} {...props}>
         {children}
-        <Dialog.Close asChild>
-          <IconButton variant="ghost" className={styles.closeBtn} aria-label="Close" size="1">
+        <Dialog.Close asChild className={styles.closeBtn}>
+          <IconButton variant="ghost" aria-label="Close" size="1">
             <X size={30} />
           </IconButton>
         </Dialog.Close>
