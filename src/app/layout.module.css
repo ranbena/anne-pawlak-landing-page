@@ -6,6 +6,14 @@
   @media (max-width: 1280px) {
     padding-inline: var(--space-6);
   }
+
+  @media (max-width: 520px) {
+    padding-inline: var(--space-4);
+  }
+
+  @media (max-width: 320px) {
+    padding-inline: var(--space-2);
+  }
 }
 
 .blob {

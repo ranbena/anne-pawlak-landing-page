@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Heading, IconButton, VisuallyHidden } from '@radix-ui/themes';
+import { Button, Heading, IconButton } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
 import React, { useCallback, useState } from 'react';
@@ -57,11 +57,8 @@ const Header: React.FC<Props> = ({ className }) => {
             </IconButton>
           </DrawerTrigger>
           <DrawerContent className={styles.mobileMenu} onCloseAutoFocus={onCloseAutoFocus}>
-            <VisuallyHidden>
-              <DrawerTitle>Mobile Menu</DrawerTitle>
-            </VisuallyHidden>
             <div className={styles.mobileMenuItems}>
-              <h1 className={styles.mobileMenuTitle}>Cooking Content</h1>
+              <DrawerTitle className={styles.mobileMenuTitle}>Cooking Content</DrawerTitle>
               <a href={getPublicPath('/#about')} onClick={() => setOpen(false)}>
                 About
               </a>

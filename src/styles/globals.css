@@ -33,8 +33,16 @@ h2 {
   line-height: 1.2;
   font-weight: 700;
 
-  @media (max-width: 767px) {
+  @media (max-width: 520px) {
     font-size: 43px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 36px;
   }
 }
 
@@ -43,7 +51,15 @@ h3 {
   line-height: 1.2;
   font-weight: 700;
 
-  @media (max-width: 767px) {
-    font-size: 35px;
+  @media (max-width: 520px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 33px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 29px;
   }
 }

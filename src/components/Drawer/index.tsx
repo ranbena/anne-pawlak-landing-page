@@ -22,16 +22,38 @@ export const Drawer: React.FC<Props> = ({ open, onOpenChange, children }) => {
 
 export const DrawerTrigger = Dialog.Trigger;
 
-export const DrawerTitle = ({ children }: { children: ReactNode }) => {
-  return <Dialog.Title className={styles.title}>{children}</Dialog.Title>;
+export const DrawerTitle = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return <Dialog.Title className={clsx(styles.title, className)}>{children}</Dialog.Title>;
 };
 
-export const DrawerDescription = ({ children }: { children: ReactNode }) => {
-  return <Dialog.Description className={styles.description}>{children}</Dialog.Description>;
+export const DrawerDescription = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return (
+    <Dialog.Description className={clsx(styles.description, className)}>
+      {children}
+    </Dialog.Description>
+  );
 };
 
-export const DrawerHeader = ({ children }: { children: ReactNode }) => {
-  return <div className={styles.header}>{children}</div>;
+export const DrawerHeader = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return <div className={clsx(styles.header, className)}>{children}</div>;
 };
 
 export const DrawerContent = ({
