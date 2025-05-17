@@ -94,5 +94,7 @@
 
   .mobileMenuTitle {
     font-weight: 600;
+    font-size: 24px;
+    text-transform: none;
   }
 }

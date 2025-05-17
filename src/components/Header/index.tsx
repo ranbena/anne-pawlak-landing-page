@@ -3,7 +3,7 @@
 import { Button, Heading, IconButton, VisuallyHidden } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { getPublicPath } from '../../utils';
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from '../Drawer';
 import styles from './header.module.css';
@@ -15,6 +15,11 @@ interface Props {
 const Header: React.FC<Props> = ({ className }) => {
   const [open, setOpen] = useState(false);
 
+  // or else the menu button regains focus, causing the window to scroll up to it
+  const onCloseAutoFocus = useCallback((e: Event) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <header className={clsx(styles.root, className)}>
       <Heading as="h1" className={styles.logo}>
@@ -22,22 +27,22 @@ const Header: React.FC<Props> = ({ className }) => {
       </Heading>
       <nav className={styles.desktop}>
         <div>
-          <a href="/#about">
+          <a href={getPublicPath('/#about')}>
             <Button variant="ghost" size="4" color="gray" highContrast radius="full">
               About
             </Button>
           </a>
-          <a href="/#angebot">
+          <a href={getPublicPath('/#angebot')}>
             <Button variant="ghost" size="4" color="gray" highContrast radius="full">
               Angebot
             </Button>
           </a>
-          <a href="/#kontakt">
+          <a href={getPublicPath('/#kontakt')}>
             <Button variant="ghost" size="4" color="gray" highContrast radius="full">
               Kontakt
             </Button>
           </a>
-          <a href="/#loslegen">
+          <a href={getPublicPath('/#loslegen')}>
             <Button variant="solid" radius="full" size="4">
               Für 0 € loslegen
             </Button>
@@ -51,22 +56,22 @@ const Header: React.FC<Props> = ({ className }) => {
               <MenuIcon size={44} />
             </IconButton>
           </DrawerTrigger>
-          <DrawerContent className={styles.mobileMenu}>
+          <DrawerContent className={styles.mobileMenu} onCloseAutoFocus={onCloseAutoFocus}>
             <VisuallyHidden>
               <DrawerTitle>Mobile Menu</DrawerTitle>
             </VisuallyHidden>
             <div className={styles.mobileMenuItems}>
-              <div className={styles.mobileMenuTitle}>Cooking Content</div>
-              <a href="/#about" onClick={() => setOpen(false)}>
+              <h1 className={styles.mobileMenuTitle}>Cooking Content</h1>
+              <a href={getPublicPath('/#about')} onClick={() => setOpen(false)}>
                 About
               </a>
-              <a href="/#angebot" onClick={() => setOpen(false)}>
+              <a href={getPublicPath('/#angebot')} onClick={() => setOpen(false)}>
                 Angebot
               </a>
-              <a href="/#kontakt" onClick={() => setOpen(false)}>
+              <a href={getPublicPath('/#kontakt')} onClick={() => setOpen(false)}>
                 Kontakt
               </a>
-              <a href="/#loslegen" onClick={() => setOpen(false)}>
+              <a href={getPublicPath('/#loslegen')} onClick={() => setOpen(false)}>
                 <Button variant="solid" radius="full" size="4" color="red">
                   Für 0 € loslegen
                 </Button>
