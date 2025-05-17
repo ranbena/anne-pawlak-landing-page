@@ -1,10 +1,10 @@
 'use client';
 
+import { getPublicPath } from '@/src/utils';
 import { Button, Heading, IconButton } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
 import React, { useCallback, useState } from 'react';
-import { getPublicPath } from '../../utils';
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from '../Drawer';
 import styles from './header.module.css';
 

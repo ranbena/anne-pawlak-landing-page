@@ -30,7 +30,7 @@ const Hero: React.FC<Props> = () => {
             '<strong>Klicks und Verkäufe</strong>'
           </span>
         </Text>
-        <a href="/#start">
+        <a href={getPublicPath('/#start')}>
           <Button variant="solid" radius="full" size="4" className={styles.button}>
             Hier loslegen!
           </Button>

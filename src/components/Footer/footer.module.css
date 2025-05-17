@@ -1,0 +1,30 @@
+.root nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #0000000f;
+  margin-block-start: 4rem;
+  padding-block: 2rem;
+
+  &,
+  a,
+  svg {
+    color: var(--gray-9);
+  }
+}
+
+.root nav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 1rem;
+  list-style: none;
+}
+
+.root :global(.rt-Separator) {
+  background-color: #0000008f;
+  width: 2px;
+}

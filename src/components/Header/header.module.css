@@ -17,6 +17,7 @@
 
 .root nav.desktop {
   position: sticky;
+  z-index: 1;
   inset-block-start: var(--space-4);
   display: flex;
   justify-content: flex-end;
