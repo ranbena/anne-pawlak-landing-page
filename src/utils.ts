@@ -1,3 +1,4 @@
 export function getPublicPath(path: string) {
-  return process.env.PAGES_BASE_PATH ? `${process.env.PAGES_BASE_PATH}${path}` : path;
+  const basePath = process.env.PAGES_BASE_PATH;
+  return basePath ? `${basePath}${path}` : path;
 }
