@@ -14,6 +14,9 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
 
+  // toggles the original <select> required value, so it's tooltip doesn't remain visible when dropdown is open
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const onSubmit = useCallback(() => {
     setIsSubmitting(true);
   }, []);
@@ -64,24 +67,38 @@ const ContactForm = () => {
             variant="soft"
             size="3"
           />
-          <Select.Root name="entry.1036041765" required size="3">
-            <Select.Trigger placeholder="HERAUSFORDERUNG" variant="soft" />
-            <Select.Content position="popper" variant="soft">
-              <Select.Item value="Exposure">Sichtbar werden</Select.Item>
-              <Select.Item value="Growth">Mehr Wachstum</Select.Item>
-              <Select.Item value="Sales">Verkaufen</Select.Item>
-              <Select.Item value="All">Etwas von Allem</Select.Item>
-            </Select.Content>
-          </Select.Root>
-          <Select.Root name="entry.892576425" required size="3">
-            <Select.Trigger placeholder="DEIN BUDGET" variant="soft" />
-            <Select.Content position="popper" variant="soft">
-              <Select.Item value="100">Bis zu 100€</Select.Item>
-              <Select.Item value="500">100 - 500€</Select.Item>
-              <Select.Item value="1000">500 - 1000€</Select.Item>
-              <Select.Item value="Above">Über 1000€</Select.Item>
-            </Select.Content>
-          </Select.Root>
+          <div className={styles.select}>
+            <Select.Root
+              name="entry.1036041765"
+              required={!isDropdownOpen}
+              size="3"
+              onOpenChange={setIsDropdownOpen}
+            >
+              <Select.Trigger placeholder="HERAUSFORDERUNG" variant="soft" />
+              <Select.Content position="popper" variant="soft">
+                <Select.Item value="Exposure">Sichtbar werden</Select.Item>
+                <Select.Item value="Growth">Mehr Wachstum</Select.Item>
+                <Select.Item value="Sales">Verkaufen</Select.Item>
+                <Select.Item value="All">Etwas von Allem</Select.Item>
+              </Select.Content>
+            </Select.Root>
+          </div>
+          <div className={styles.select}>
+            <Select.Root
+              name="entry.892576425"
+              required={!isDropdownOpen}
+              size="3"
+              onOpenChange={setIsDropdownOpen}
+            >
+              <Select.Trigger placeholder="DEIN BUDGET" variant="soft" />
+              <Select.Content position="popper" variant="soft">
+                <Select.Item value="100">Bis zu 100€</Select.Item>
+                <Select.Item value="500">100 - 500€</Select.Item>
+                <Select.Item value="1000">500 - 1000€</Select.Item>
+                <Select.Item value="Above">Über 1000€</Select.Item>
+              </Select.Content>
+            </Select.Root>
+          </div>
           <TextArea
             className={styles.textarea}
             name="entry.1595123500"
