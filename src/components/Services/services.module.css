@@ -10,7 +10,7 @@
 
   img {
     grid-area: img;
-    transform: rotate(11deg);
+    transform: rotate(11deg) scale(0.9);
     max-width: 60vw;
     height: auto;
     margin-inline: auto;
