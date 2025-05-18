@@ -23,7 +23,7 @@ const Header: React.FC<Props> = ({ className }) => {
   return (
     <header className={clsx(styles.root, className)}>
       <Heading as="h1" className={styles.logo}>
-        <img src={getPublicPath('/logo.png')} alt="Cooking Content" />
+        <img src={getPublicPath('/logo.png')} alt="Cooking Content" loading="lazy" />
       </Heading>
       <nav className={styles.desktop}>
         <div>
@@ -43,7 +43,7 @@ const Header: React.FC<Props> = ({ className }) => {
             </Button>
           </a>
           <a href={getPublicPath('/#loslegen')}>
-            <Button variant="solid" radius="full" size="4">
+            <Button radius="full" size="4">
               Für 0 € loslegen
             </Button>
           </a>
@@ -69,7 +69,7 @@ const Header: React.FC<Props> = ({ className }) => {
                 Kontakt
               </a>
               <a href={getPublicPath('/#loslegen')} onClick={() => setOpen(false)}>
-                <Button variant="solid" radius="full" size="4" color="red">
+                <Button radius="full" size="4">
                   Für 0 € loslegen
                 </Button>
               </a>
