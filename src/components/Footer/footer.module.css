@@ -1,4 +1,5 @@
 .root nav {
+  padding-inline: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +23,7 @@
   padding: 0;
   gap: 1rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .root :global(.rt-Separator) {
