@@ -28,3 +28,13 @@
   background-color: #0000008f;
   width: 2px;
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  &.instagramIcon {
+    width: 26px;
+    height: 26px;
+  }
+}
