@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, Section } from '@radix-ui/themes';
+import About from '../components/About';
 import ContactForm from '../components/ContactForm';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
@@ -27,7 +28,10 @@ export default function Home() {
           </Button>
         </a>
       </Section>
-      <Section id="kontakt">
+      <Section className={styles.about} id="about">
+        <About />
+      </Section>
+      <Section id="kontakt" className={styles.contact}>
         <h1 className="secondaryTitle">Kontakt</h1>
         <ContactForm />
       </Section>

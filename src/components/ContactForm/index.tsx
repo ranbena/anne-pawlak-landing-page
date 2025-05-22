@@ -42,7 +42,7 @@ const ContactForm = () => {
             name="entry.760257597"
             placeholder="NAME"
             required
-            variant="soft"
+            variant="surface"
             size="3"
           />
           <TextField.Root
@@ -50,21 +50,21 @@ const ContactForm = () => {
             name="entry.2103074590"
             placeholder="EMAIL"
             required
-            variant="soft"
+            variant="surface"
             size="3"
           />
           <TextField.Root
             type="text"
             name="entry.1652608311"
             placeholder="WEBSITE"
-            variant="soft"
+            variant="surface"
             size="3"
           />
           <TextField.Root
             type="text"
             name="entry.62845363"
             placeholder="SOCIAL MEDIA HANDLE"
-            variant="soft"
+            variant="surface"
             size="3"
           />
           <div className={styles.select}>
@@ -74,7 +74,7 @@ const ContactForm = () => {
               size="3"
               onOpenChange={setIsDropdownOpen}
             >
-              <Select.Trigger placeholder="HERAUSFORDERUNG" variant="soft" />
+              <Select.Trigger placeholder="HERAUSFORDERUNG" variant="surface" />
               <Select.Content position="popper" variant="soft">
                 <Select.Item value="Exposure">Sichtbar werden</Select.Item>
                 <Select.Item value="Growth">Mehr Wachstum</Select.Item>
@@ -90,7 +90,7 @@ const ContactForm = () => {
               size="3"
               onOpenChange={setIsDropdownOpen}
             >
-              <Select.Trigger placeholder="DEIN BUDGET" variant="soft" />
+              <Select.Trigger placeholder="DEIN BUDGET" variant="surface" />
               <Select.Content position="popper" variant="soft">
                 <Select.Item value="100">Bis zu 100€</Select.Item>
                 <Select.Item value="500">100 - 500€</Select.Item>
@@ -103,7 +103,7 @@ const ContactForm = () => {
             className={styles.textarea}
             name="entry.1595123500"
             placeholder="ICH MELD MICH HEUT BEI DIR WEIL..."
-            variant="soft"
+            variant="surface"
             size="3"
           />
         </form>
@@ -116,8 +116,8 @@ const ContactForm = () => {
           formTarget="google-form-iframe"
           radius="full"
         >
-          <SendHorizontalIcon />
           Hier loslegen!
+          <SendHorizontalIcon />
         </Button>
         <IframePopover isOpen={showIframe} close={() => setShowIframe(false)}>
           <iframe
