@@ -1,4 +1,4 @@
-import { getPublicPath } from '@/src/utils';
+import { getPublicPath } from '@/src/utils/getPublicPath';
 import { InstagramIcon, MessagesSquareIcon, ShoppingCartIcon } from 'lucide-react';
 import BecomeVisibleOnSocialContent from './become-visible-on-social.mdx';
 import GrowOnSocialContent from './growing-on-social.mdx';

@@ -1,4 +1,4 @@
-import { getPublicPath } from '@/src/utils';
+import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button } from '@radix-ui/themes';
 import styles from './about.module.css';
 import Text from './text.mdx';

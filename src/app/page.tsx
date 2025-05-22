@@ -5,7 +5,7 @@ import About from '../components/About';
 import ContactForm from '../components/ContactForm';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import { getPublicPath } from '../utils';
+import { getPublicPath } from '../utils/getPublicPath';
 import styles from './page.module.css';
 
 export default function Home() {

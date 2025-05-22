@@ -1,6 +1,6 @@
 'use client';
 
-import { getPublicPath } from '@/src/utils';
+import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button, IconButton, Separator } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { InstagramIcon } from 'lucide-react';

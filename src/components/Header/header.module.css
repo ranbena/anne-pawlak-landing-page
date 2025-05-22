@@ -85,6 +85,12 @@
   position: fixed;
   right: 34px;
   top: 26px;
+  z-index: 1;
+
+  &.ios {
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
 }
 
 .mobileMenu {

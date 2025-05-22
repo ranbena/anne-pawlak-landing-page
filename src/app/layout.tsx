@@ -8,7 +8,7 @@ const fraunces = Fraunces({
 });
 
 import '../styles/globals.css';
-import { getPublicPath } from '../utils';
+import { getPublicPath } from '../utils/getPublicPath';
 import ClientLayout from './_clientLayout';
 
 export const metadata: Metadata = {

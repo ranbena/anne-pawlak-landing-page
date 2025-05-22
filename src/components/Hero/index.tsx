@@ -1,5 +1,5 @@
 import { Button, Flex, Text } from '@radix-ui/themes';
-import { getPublicPath } from '../../utils';
+import { getPublicPath } from '../../utils/getPublicPath';
 import styles from './hero.module.css';
 
 interface Props {}

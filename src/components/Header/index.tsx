@@ -1,6 +1,7 @@
 'use client';
 
-import { getPublicPath } from '@/src/utils';
+import { getPublicPath } from '@/src/utils/getPublicPath';
+import { useIsIOS } from '@/src/utils/isIOS';
 import { Button, Heading, IconButton } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
@@ -14,6 +15,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ className }) => {
   const [open, setOpen] = useState(false);
+  const isIOS = useIsIOS();
 
   // or else the menu button regains focus, causing the window to scroll up to it
   const onCloseAutoFocus = useCallback((e: Event) => {
@@ -57,7 +59,7 @@ const Header: React.FC<Props> = ({ className }) => {
               size="4"
               highContrast
               radius="full"
-              className={styles.mobileMenuTrigger}
+              className={clsx(styles.mobileMenuTrigger, { [styles.ios]: isIOS })}
             >
               <MenuIcon size={44} />
             </IconButton>
