@@ -52,7 +52,13 @@ const Header: React.FC<Props> = ({ className }) => {
       <nav className={styles.mobile}>
         <Drawer open={open} onOpenChange={setOpen}>
           <DrawerTrigger asChild>
-            <IconButton variant="ghost" size="4" highContrast radius="full">
+            <IconButton
+              variant="ghost"
+              size="4"
+              highContrast
+              radius="full"
+              className={styles.mobileMenuTrigger}
+            >
               <MenuIcon size={44} />
             </IconButton>
           </DrawerTrigger>
@@ -69,7 +75,7 @@ const Header: React.FC<Props> = ({ className }) => {
                 Kontakt
               </a>
               <a href={getPublicPath('/#loslegen')} onClick={() => setOpen(false)}>
-                <Button radius="full" size="4">
+                <Button radius="full" size="4" color="red">
                   Für 0 € loslegen
                 </Button>
               </a>

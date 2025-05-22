@@ -79,6 +79,14 @@
   }
 }
 
+.mobileMenuTrigger {
+  backdrop-filter: blur(40px);
+  background-color: #fff9ee63;
+  position: fixed;
+  right: 34px;
+  top: 26px;
+}
+
 .mobileMenu {
   padding: 0;
   display: flex;
