@@ -79,7 +79,7 @@
   }
 }
 
-.mobileMenuTrigger {
+button.mobileMenuTrigger {
   backdrop-filter: blur(40px);
   background-color: #fff9ee63;
   position: fixed;
