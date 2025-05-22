@@ -11,6 +11,11 @@
   gap: 10px;
   width: 100%;
 
+  --color-surface: #fee7d3;
+  --gray-a7: var(--accent-a7);
+  --gray-a8: var(--accent-a8);
+  --gray-12: var(--accent-12);
+
   @media (max-width: 460px) {
     grid-template-columns: 1fr;
   }
