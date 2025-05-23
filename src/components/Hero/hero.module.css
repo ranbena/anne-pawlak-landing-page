@@ -26,6 +26,7 @@
 .image {
   background-color: var(--gray-12);
   width: 450px;
+  aspect-ratio: 1/1;
   max-width: 95vw;
   height: auto;
   border-radius: 50%;
