@@ -124,7 +124,7 @@ const ContactForm = () => {
               formTarget="google-form-iframe"
               radius="full"
             >
-              Hier loslegen!
+              Abschicken
               <SendHorizontalIcon />
             </Button>
             <IframePopover isOpen={showIframe} close={() => setShowIframe(false)}>
