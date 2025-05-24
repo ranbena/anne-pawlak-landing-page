@@ -28,6 +28,7 @@ export default function RootLayout({
           :root {
             --fraunces: ${fraunces.style.fontFamily};
             --bg_blob: url(${getPublicPath('/bg_blob.png')});
+            --bg_blob_bottom: url(${getPublicPath('/bg_blob_contact.webp')});
           }
         `}</style>
       </head>

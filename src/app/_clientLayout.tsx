@@ -16,6 +16,7 @@ const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         <div className={styles.blob} />
         {children}
       </Container>
+      <div className={styles.bottomBlob} />
       <Footer />
       <Theme accentColor="gray">
         <div id="dialog-portal" />

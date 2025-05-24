@@ -1,3 +1,7 @@
+.root {
+  backdrop-filter: blur(60px);
+}
+
 .root nav {
   padding-inline: 1rem;
   display: flex;
@@ -6,7 +10,6 @@
   align-items: center;
   gap: 1rem;
   background-color: #0000000f;
-  margin-block-start: 4rem;
   padding-block: 2rem;
 
   &,

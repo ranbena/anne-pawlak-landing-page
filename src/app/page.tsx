@@ -23,7 +23,7 @@ export default function Home() {
       <Section className={styles.boosterGuide}>
         <BoosterGuide />
       </Section>
-      <Section id="kontakt" className={styles.contact}>
+      <Section id="kontakt">
         <h1 className="secondaryTitle">Kontakt</h1>
         <ContactForm />
       </Section>
