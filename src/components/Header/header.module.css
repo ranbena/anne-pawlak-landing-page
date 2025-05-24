@@ -19,10 +19,13 @@
   position: sticky;
   z-index: 1;
   inset-block-start: var(--space-4);
+  margin-block-start: -114px;
+}
+
+.desktopContainer > div {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-block-start: -114px;
 
   & > div {
     width: fit-content;
@@ -84,7 +87,7 @@ button.mobileMenuTrigger {
   background-color: #fff9ee63;
   position: fixed;
   right: 22px;
-  top: 26px;
+  top: 22px;
   z-index: 1;
 
   &.ios {

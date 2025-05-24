@@ -24,7 +24,6 @@ export default function Home() {
         <BoosterGuide />
       </Section>
       <Section id="kontakt">
-        <h1 className="secondaryTitle">Kontakt</h1>
         <ContactForm />
       </Section>
     </div>

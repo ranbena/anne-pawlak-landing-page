@@ -84,3 +84,30 @@
     clip: auto !important;
   }
 }
+
+.blob {
+  background-image: var(--bg_blob_2);
+  z-index: -1;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 130%;
+  position: absolute;
+  inset: auto 0 0 50%;
+  height: 750px;
+  pointer-events: none;
+  opacity: 0.8;
+
+  @media (max-width: 1024px) {
+    height: 660px;
+  }
+
+  @media (max-width: 820px) {
+    inset-inline-start: 10%;
+    background-size: 170%;
+  }
+
+  @media (max-width: 520px) {
+    height: 100vh;
+    background-size: 300%;
+  }
+}

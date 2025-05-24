@@ -66,6 +66,8 @@ h3 {
 }
 
 .rt-ContainerInner {
+  box-sizing: border-box;
+
   @media (max-width: 1280px) {
     padding-inline: var(--space-6);
   }

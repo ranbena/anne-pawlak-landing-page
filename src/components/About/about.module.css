@@ -1,4 +1,8 @@
 .root {
+  position: relative;
+}
+
+.container > div {
   display: flex;
   flex-direction: row-reverse;
   column-gap: 120px;
@@ -78,5 +82,21 @@
         display: none;
       }
     }
+  }
+}
+
+.blob {
+  background-image: var(--bg_blob_2);
+  z-index: -1;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  inset: 0 0 -50px 50%;
+  pointer-events: none;
+  opacity: 0.8;
+
+  @media (max-width: 600px) {
+    display: none;
   }
 }

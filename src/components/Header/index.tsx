@@ -2,7 +2,7 @@
 
 import { getPublicPath } from '@/src/utils/getPublicPath';
 import { useIsIOS } from '@/src/utils/isIOS';
-import { Button, Heading, IconButton } from '@radix-ui/themes';
+import { Button, Container, Heading, IconButton } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
 import React, { useCallback, useState } from 'react';
@@ -24,32 +24,36 @@ const Header: React.FC<Props> = ({ className }) => {
 
   return (
     <header className={clsx(styles.root, className)}>
-      <Heading as="h1" className={styles.logo}>
-        <img src={getPublicPath('/logo.png')} alt="Cooking Content" loading="lazy" />
-      </Heading>
+      <Container size="4">
+        <Heading as="h1" className={styles.logo}>
+          <img src={getPublicPath('/logo.png')} alt="Cooking Content" loading="lazy" />
+        </Heading>
+      </Container>
       <nav className={styles.desktop}>
-        <div>
-          <a href={getPublicPath('/#about')}>
-            <Button variant="ghost" size="4" color="gray" highContrast radius="full">
-              About
-            </Button>
-          </a>
-          <a href={getPublicPath('/#angebot')}>
-            <Button variant="ghost" size="4" color="gray" highContrast radius="full">
-              Angebot
-            </Button>
-          </a>
-          <a href={getPublicPath('/#kontakt')}>
-            <Button variant="ghost" size="4" color="gray" highContrast radius="full">
-              Kontakt
-            </Button>
-          </a>
-          <a href={getPublicPath('/#loslegen')}>
-            <Button radius="full" size="4">
-              Für 0 € loslegen
-            </Button>
-          </a>
-        </div>
+        <Container size="4" className={styles.desktopContainer}>
+          <div>
+            <a href={getPublicPath('/#about')}>
+              <Button variant="ghost" size="4" color="gray" highContrast radius="full">
+                About
+              </Button>
+            </a>
+            <a href={getPublicPath('/#angebot')}>
+              <Button variant="ghost" size="4" color="gray" highContrast radius="full">
+                Angebot
+              </Button>
+            </a>
+            <a href={getPublicPath('/#kontakt')}>
+              <Button variant="ghost" size="4" color="gray" highContrast radius="full">
+                Kontakt
+              </Button>
+            </a>
+            <a href={getPublicPath('/#loslegen')}>
+              <Button radius="full" size="4">
+                Für 0 € loslegen
+              </Button>
+            </a>
+          </div>
+        </Container>
       </nav>
       <nav className={styles.mobile}>
         <Drawer open={open} onOpenChange={setOpen}>
