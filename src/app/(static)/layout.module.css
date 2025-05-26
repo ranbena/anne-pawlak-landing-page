@@ -1,0 +1,20 @@
+.root {
+  h1 {
+    margin-block-end: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    white-space: pre-line;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      background-color: var(--gray-2);
+    }
+  }
+}

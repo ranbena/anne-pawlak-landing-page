@@ -17,7 +17,7 @@ const Footer: React.FC<Props> = ({ className }) => {
     <footer className={clsx(styles.root, className)}>
       <nav>
         <div>
-          <a>
+          <a href="https://www.instagram.com/thisisannepawlak/" target="_blank">
             <IconButton variant="ghost" size="2" color="gray" highContrast>
               <InstagramIcon className={clsx(styles.icon, styles.instagramIcon)} />
             </IconButton>
@@ -29,13 +29,13 @@ const Footer: React.FC<Props> = ({ className }) => {
           </a>
         </div>
         <div>
-          <a href={getPublicPath('/#impressum')}>
+          <a href={getPublicPath('/impressum')}>
             <Button variant="ghost" color="gray" highContrast size="3">
               Impressum
             </Button>
           </a>
           <Separator orientation="vertical" />
-          <a href={getPublicPath('/#datenschutz')}>
+          <a href={getPublicPath('/datenschutz')}>
             <Button variant="ghost" color="gray" highContrast size="3">
               Datenschutzerklärung
             </Button>

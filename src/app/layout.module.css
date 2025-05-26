@@ -1,33 +1,8 @@
-.topBlob {
-  background-image: var(--bg_blob_1);
-  background-size: 78%;
-  background-position: 0 0;
-  background-repeat: no-repeat;
+.root {
+  display: flex;
+  flex-direction: column;
 
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  inset-block-start: -240px;
-  inset-inline-start: -90px;
-  max-width: var(--container-4);
-  margin-inline: auto;
-  pointer-events: none;
-
-  @media (max-width: 1024px) {
-    inset-block-start: -160px;
-    inset-inline-start: -70px;
-  }
-
-  @media (max-width: 768px) {
-    background-size: 120%;
-    inset-block-start: -80px;
-    inset-inline-start: -100px;
-  }
-
-  @media (max-width: 520px) {
-    background-size: 165%;
-    inset-block-start: -160px;
-    inset-inline-start: -190px;
-    opacity: 0.6;
+  main {
+    flex: 1;
   }
 }

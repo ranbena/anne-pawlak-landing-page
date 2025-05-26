@@ -44,7 +44,7 @@ const Services: React.FC = () => {
         Ich kreier Content für Social Media & Landingpages, die verkaufen, und helfe dir bei der
         Funnel-Umsetzung – ohne, Rumraten oder Rumtanzen.
       </p>
-      <a href={getPublicPath('/#loslegen')}>
+      <a href={getPublicPath('/zero-euro')}>
         <Button size="4" radius="full">
           Starte für 0 €
         </Button>

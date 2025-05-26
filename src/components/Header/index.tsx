@@ -47,7 +47,7 @@ const Header: React.FC<Props> = ({ className }) => {
                 Kontakt
               </Button>
             </a>
-            <a href={getPublicPath('/#loslegen')}>
+            <a href={getPublicPath('/zero-euro')}>
               <Button radius="full" size="4">
                 Für 0 € loslegen
               </Button>
@@ -80,7 +80,7 @@ const Header: React.FC<Props> = ({ className }) => {
               <a href={getPublicPath('/#kontakt')} onClick={() => setOpen(false)}>
                 Kontakt
               </a>
-              <a href={getPublicPath('/#loslegen')} onClick={() => setOpen(false)}>
+              <a href={getPublicPath('/zero-euro')} onClick={() => setOpen(false)}>
                 <Button radius="full" size="4" color="red">
                   Für 0 € loslegen
                 </Button>

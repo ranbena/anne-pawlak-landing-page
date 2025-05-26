@@ -31,7 +31,7 @@ const Hero: React.FC<Props> = () => {
               '<strong>Klicks und Verkäufe</strong>'
             </span>
           </Text>
-          <a href={getPublicPath('/#loslegen')}>
+          <a href={getPublicPath('/zero-euro')}>
             <Button radius="full" size="4" className={styles.button}>
               Hier loslegen!
             </Button>
