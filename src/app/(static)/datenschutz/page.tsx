@@ -1,5 +1,3 @@
-'use client';
-
 import { Container, Section } from '@radix-ui/themes';
 import Text from './_text.mdx';
 

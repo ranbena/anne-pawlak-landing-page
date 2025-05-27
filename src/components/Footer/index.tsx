@@ -1,5 +1,3 @@
-'use client';
-
 import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button, IconButton, Separator } from '@radix-ui/themes';
 import clsx from 'clsx';

@@ -1,11 +1,9 @@
-'use client';
-
+import About from '@/src/components/About';
+import BoosterGuide from '@/src/components/BoosterGuide';
+import ContactForm from '@/src/components/ContactForm';
+import Hero from '@/src/components/Hero';
+import Services from '@/src/components/Services';
 import { Section } from '@radix-ui/themes';
-import About from '../../components/About';
-import BoosterGuide from '../../components/BoosterGuide';
-import ContactForm from '../../components/ContactForm';
-import Hero from '../../components/Hero';
-import Services from '../../components/Services';
 import styles from './page.module.css';
 
 export default function Home() {
