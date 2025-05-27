@@ -1,4 +1,5 @@
 import Header from '@/src/components/Header';
+import { getPublicPath } from '@/src/utils/getPublicPath';
 import type { Metadata } from 'next';
 import styles from './layout.module.css';
 
@@ -15,7 +16,10 @@ export default function HomepageLayout({
   return (
     <>
       <Header />
-      <div className={styles.topBlob} />
+      <div
+        className={styles.blob}
+        style={{ backgroundImage: `url(${getPublicPath('/bg_blob.png')})` }}
+      />
       {children}
     </>
   );

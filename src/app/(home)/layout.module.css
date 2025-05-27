@@ -1,5 +1,4 @@
-.topBlob {
-  background-image: var(--bg_blob_1);
+.blob {
   background-size: 78%;
   background-position: 0 0;
   background-repeat: no-repeat;

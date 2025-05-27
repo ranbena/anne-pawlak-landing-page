@@ -10,7 +10,6 @@ const fraunces = Fraunces({
   display: 'swap',
 });
 
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -29,8 +28,6 @@ export default function RootLayout({
         <style>{`
           :root {
             --fraunces: ${fraunces.style.fontFamily};
-            --bg_blob_1: url(${getPublicPath('/bg_blob.png')});
-            --bg_blob_2: url(${getPublicPath('/bg_blob_contact.webp')});
           }
         `}</style>
       </head>

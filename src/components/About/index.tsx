@@ -21,7 +21,10 @@ const About: React.FC = () => {
           </Button>
         </div>
       </Container>
-      <div className={styles.blob} />
+      <div
+        className={styles.blob}
+        style={{ backgroundImage: `url(${getPublicPath('/bg_blob_contact.webp')})` }}
+      />
     </div>
   );
 };
