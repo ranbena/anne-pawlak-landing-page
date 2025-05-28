@@ -1,8 +1,11 @@
 import { Container, Section } from '@radix-ui/themes';
+import { Metadata } from 'next';
 
-interface Props {}
+export const metadata: Metadata = {
+  title: 'Zero Euro',
+};
 
-const Impressum: React.FC<Props> = () => {
+const ZeroEuro = () => {
   return (
     <Section>
       <Container size="4">
@@ -12,4 +15,4 @@ const Impressum: React.FC<Props> = () => {
   );
 };
 
-export default Impressum;
+export default ZeroEuro;

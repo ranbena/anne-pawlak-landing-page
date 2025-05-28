@@ -1,9 +1,13 @@
 import { Container, Section } from '@radix-ui/themes';
+import { Metadata } from 'next';
 import Text from './_text.mdx';
 
-interface Props {}
+export const metadata: Metadata = {
+  robots: 'noindex',
+  title: 'Datenschutz',
+};
 
-const Impressum: React.FC<Props> = () => {
+const Datenschutz = () => {
   return (
     <Section>
       <Container size="4">
@@ -14,4 +18,4 @@ const Impressum: React.FC<Props> = () => {
   );
 };
 
-export default Impressum;
+export default Datenschutz;

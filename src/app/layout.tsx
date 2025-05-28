@@ -1,6 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import Footer from '@/src/components/Footer';
+import '@/src/styles/globals.css';
 import { Theme } from '@radix-ui/themes';
 import { Fraunces } from 'next/font/google';
 import styles from './layout.module.css';
@@ -10,11 +11,16 @@ const fraunces = Fraunces({
   display: 'swap',
 });
 
-import '../styles/globals.css';
-
 export const metadata: Metadata = {
-  title: 'Anne Pawlak',
+  title: {
+    default: 'Anne Pawlak',
+    template: '%s | Anne Pawlak',
+  },
   description: 'Verwandle deine Online-Präsenz in ein Online Business',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#fff9ee',
 };
 
 export default function RootLayout({
