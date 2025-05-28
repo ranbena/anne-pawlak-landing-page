@@ -14,9 +14,10 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: {
     default: 'Anne Pawlak',
-    template: '%s | Anne Pawlak',
+    template: '%s · Anne Pawlak',
   },
   description: 'Verwandle deine Online-Präsenz in ein Online Business',
+  metadataBase: new URL(process.env.APP_URL!),
 };
 
 export const viewport: Viewport = {
