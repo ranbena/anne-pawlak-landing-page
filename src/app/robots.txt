@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /datenschutz
 Disallow: /impressum
 Disallow: /agb
+
+Sitemap: https://annepawlak.de/sitemap.xml
