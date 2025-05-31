@@ -61,9 +61,9 @@ jobs:
       - name: Build with Next.js
         run: pnpm run build
         env:
-          APP_URL: https://ranbena.github.io
-          PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
-          NEXT_PUBLIC_PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+          APP_URL: https://annepawlak.de
+          # PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+          # NEXT_PUBLIC_PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
