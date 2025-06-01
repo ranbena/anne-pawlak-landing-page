@@ -17,7 +17,17 @@ const ContactForm = () => {
   // toggles the original <select> required value, so it's tooltip doesn't remain visible when dropdown is open
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const onSubmit = useCallback(() => {
+  const onSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
+    // Honeypot validation - check if the hidden field was filled
+    const formData = new FormData(event.currentTarget);
+    const honeypotValue = formData.get('entry.12341234') as string | null;
+
+    if (honeypotValue?.trim()) {
+      // Bot detected - silently prevent submission
+      event.preventDefault();
+      return;
+    }
+
     setIsSubmitting(true);
   }, []);
 
@@ -75,6 +85,16 @@ const ContactForm = () => {
                 variant="surface"
                 size="3"
               />
+              <TextField.Root
+                type="text"
+                name="entry.12341234"
+                placeholder="ADRESSE"
+                variant="surface"
+                size="3"
+                tabIndex={-1}
+                autoComplete="off"
+                className={styles.honeypot}
+              />
               <div className={styles.select}>
                 <Select.Root
                   name="entry.1036041765"
@@ -113,6 +133,7 @@ const ContactForm = () => {
                 placeholder="ICH MELD MICH HEUT BEI DIR WEIL..."
                 variant="surface"
                 size="3"
+                maxLength={175}
               />
             </form>
             <Button
