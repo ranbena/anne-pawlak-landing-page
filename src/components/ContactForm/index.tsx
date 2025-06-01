@@ -93,7 +93,7 @@ const ContactForm = () => {
                 size="3"
                 tabIndex={-1}
                 autoComplete="off"
-                className={styles.honeypot}
+                className={styles.address}
               />
               <div className={styles.select}>
                 <Select.Root

@@ -113,7 +113,8 @@
   }
 }
 
-.honeypot {
+/* honeypot field */
+.address {
   position: absolute !important;
   left: -9999px !important;
   top: -9999px !important;
