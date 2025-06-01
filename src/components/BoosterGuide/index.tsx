@@ -1,4 +1,3 @@
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button, Container } from '@radix-ui/themes';
 import React from 'react';
 import styles from './boosterguide.module.css';
@@ -25,7 +24,7 @@ const BoosterGuide: React.FC = () => {
           </Button>
         </div>
         <div className={styles.img}>
-          <img src={getPublicPath('/instabio.png')} loading="lazy" />
+          <img src="/instabio.png" loading="lazy" />
         </div>
       </div>
     </Container>

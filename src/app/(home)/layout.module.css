@@ -1,4 +1,5 @@
 .blob {
+  background-image: url('/bg_blob.png');
   background-size: 78%;
   background-position: 0 0;
   background-repeat: no-repeat;

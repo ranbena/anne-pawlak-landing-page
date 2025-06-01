@@ -4,7 +4,6 @@ import { Button, Container, Grid, Select, TextArea, TextField } from '@radix-ui/
 import { SendHorizontalIcon } from 'lucide-react';
 import { useCallback, useState } from 'react';
 
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import IframePopover from '../IframePopover';
 import styles from './contactform.module.css';
 
@@ -139,10 +138,7 @@ const ContactForm = () => {
           </div>
         </Grid>
       </Container>
-      <div
-        className={styles.blob}
-        style={{ backgroundImage: `url(${getPublicPath('/bg_blob_contact.webp')})` }}
-      />
+      <div className={styles.blob} />
     </div>
   );
 };

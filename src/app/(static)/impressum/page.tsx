@@ -1,4 +1,4 @@
-import { Container, Section } from '@radix-ui/themes';
+import { Container } from '@radix-ui/themes';
 import { Metadata } from 'next';
 import Text from './_text.mdx';
 
@@ -9,12 +9,10 @@ export const metadata: Metadata = {
 
 const Impressum = () => {
   return (
-    <Section>
-      <Container size="4">
-        <h1>Impressum</h1>
-        <Text />
-      </Container>
-    </Section>
+    <Container size="4">
+      <h1>Impressum</h1>
+      <Text />
+    </Container>
   );
 };
 

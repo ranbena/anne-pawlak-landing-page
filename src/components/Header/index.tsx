@@ -1,10 +1,10 @@
 'use client';
 
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import { useIsIOS } from '@/src/utils/isIOS';
 import { Button, Container, Heading, IconButton } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { MenuIcon } from 'lucide-react';
+import Link from 'next/link';
 import React, { useCallback, useState } from 'react';
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from '../Drawer';
 import styles from './header.module.css';
@@ -26,32 +26,32 @@ const Header: React.FC<Props> = ({ className }) => {
     <header className={clsx(styles.root, className)}>
       <Container size="4">
         <Heading as="h1" className={styles.logo}>
-          <img src={getPublicPath('/logo.png')} alt="Cooking Content" loading="lazy" />
+          <img src="/logo.png" alt="Cooking Content" loading="lazy" />
         </Heading>
       </Container>
       <nav className={styles.desktop}>
         <Container size="4" className={styles.desktopContainer}>
           <div>
-            <a href={getPublicPath('/#about')}>
+            <Link href="/#about">
               <Button variant="ghost" size="4" color="gray" highContrast radius="full">
                 About
               </Button>
-            </a>
-            <a href={getPublicPath('/#angebot')}>
+            </Link>
+            <Link href="/#angebot">
               <Button variant="ghost" size="4" color="gray" highContrast radius="full">
                 Angebot
               </Button>
-            </a>
-            <a href={getPublicPath('/#kontakt')}>
+            </Link>
+            <Link href="/#kontakt">
               <Button variant="ghost" size="4" color="gray" highContrast radius="full">
                 Kontakt
               </Button>
-            </a>
-            <a href={getPublicPath('/zero-euro')}>
+            </Link>
+            <Link href="/zero-euro">
               <Button radius="full" size="4">
                 Für 0 € loslegen
               </Button>
-            </a>
+            </Link>
           </div>
         </Container>
       </nav>
@@ -71,20 +71,20 @@ const Header: React.FC<Props> = ({ className }) => {
           <DrawerContent className={styles.mobileMenu} onCloseAutoFocus={onCloseAutoFocus}>
             <div className={styles.mobileMenuItems}>
               <DrawerTitle className={styles.mobileMenuTitle}>Cooking Content</DrawerTitle>
-              <a href={getPublicPath('/#about')} onClick={() => setOpen(false)}>
+              <Link href="/#about" onClick={() => setOpen(false)}>
                 About
-              </a>
-              <a href={getPublicPath('/#angebot')} onClick={() => setOpen(false)}>
+              </Link>
+              <Link href="/#angebot" onClick={() => setOpen(false)}>
                 Angebot
-              </a>
-              <a href={getPublicPath('/#kontakt')} onClick={() => setOpen(false)}>
+              </Link>
+              <Link href="/#kontakt" onClick={() => setOpen(false)}>
                 Kontakt
-              </a>
-              <a href={getPublicPath('/zero-euro')} onClick={() => setOpen(false)}>
+              </Link>
+              <Link href="/zero-euro" onClick={() => setOpen(false)}>
                 <Button radius="full" size="4" color="red">
                   Für 0 € loslegen
                 </Button>
-              </a>
+              </Link>
             </div>
           </DrawerContent>
         </Drawer>

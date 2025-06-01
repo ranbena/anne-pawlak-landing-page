@@ -1,6 +1,6 @@
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button, Container } from '@radix-ui/themes';
 import { InstagramIcon, MessagesSquareIcon, ShoppingCartIcon } from 'lucide-react';
+import Link from 'next/link';
 import BecomeVisibleOnSocialContent from './become-visible-on-social.mdx';
 import GrowOnSocialContent from './growing-on-social.mdx';
 import SellOnSocialContent from './sell-on-social.mdx';
@@ -32,23 +32,18 @@ const Services: React.FC = () => {
           </h4>
           <GrowOnSocialContent />
         </div>
-        <img
-          src={getPublicPath('/services-phone.png')}
-          alt="Phone screenshot"
-          width={280}
-          height={549}
-        />
+        <img src="/services-phone.png" alt="Phone screenshot" width={280} height={549} />
       </div>
       <h1>Dann bist du hier richtig!</h1>
       <p>
         Ich kreier Content für Social Media & Landingpages, die verkaufen, und helfe dir bei der
         Funnel-Umsetzung – ohne, Rumraten oder Rumtanzen.
       </p>
-      <a href={getPublicPath('/zero-euro')}>
+      <Link href="/zero-euro">
         <Button size="4" radius="full">
           Starte für 0 €
         </Button>
-      </a>
+      </Link>
     </Container>
   );
 };

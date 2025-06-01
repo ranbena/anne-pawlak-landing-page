@@ -1,4 +1,8 @@
 .root {
+  padding-block-end: 40px;
+}
+
+.content {
   h1 {
     margin-block-end: 20px;
   }
@@ -16,5 +20,26 @@
     &:hover {
       background-color: var(--gray-2);
     }
+  }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: var(--space-4);
+  margin-block-start: var(--space-4);
+  margin-block-end: var(--space-4);
+
+  color: var(--accent-12);
+  text-decoration: none;
+
+  @media (max-width: 1280px) {
+    margin-block-start: var(--space-6);
+    margin-inline-start: var(--space-6);
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 }

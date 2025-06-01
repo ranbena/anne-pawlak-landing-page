@@ -1,5 +1,5 @@
 import { Button, Container, Flex, Text } from '@radix-ui/themes';
-import { getPublicPath } from '../../utils/getPublicPath';
+import Link from 'next/link';
 import styles from './hero.module.css';
 
 interface Props {}
@@ -31,14 +31,14 @@ const Hero: React.FC<Props> = () => {
               '<strong>Klicks und Verkäufe</strong>'
             </span>
           </Text>
-          <a href={getPublicPath('/zero-euro')}>
+          <Link href="/zero-euro">
             <Button radius="full" size="4" className={styles.button}>
               Hier loslegen!
             </Button>
-          </a>
+          </Link>
         </Flex>
         <div className={styles.image}>
-          <img src={getPublicPath('/headshot.jpeg')} alt="Anne Pawlak" loading="lazy" />
+          <img src="/headshot.jpeg" alt="Anne Pawlak" loading="lazy" />
         </div>
       </Flex>
     </Container>

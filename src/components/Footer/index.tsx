@@ -1,7 +1,7 @@
-import { getPublicPath } from '@/src/utils/getPublicPath';
 import { Button, IconButton, Separator } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { InstagramIcon } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 import styles from './footer.module.css';
 import PinterestIcon from './pinterest-icon';
@@ -21,29 +21,29 @@ const Footer: React.FC<Props> = ({ className }) => {
             </IconButton>
           </a>
           <a>
-            <IconButton variant="ghost" size="2" color="gray" highContrast>
+            <IconButton variant="ghost" size="2" color="gray" highContrast disabled>
               <PinterestIcon className={styles.icon} />
             </IconButton>
           </a>
         </div>
         <div>
-          <a href={getPublicPath('/impressum')}>
+          <Link href="/impressum">
             <Button variant="ghost" color="gray" highContrast size="3">
               Impressum
             </Button>
-          </a>
+          </Link>
           <Separator orientation="vertical" />
-          <a href={getPublicPath('/datenschutz')}>
+          <Link href="/datenschutz">
             <Button variant="ghost" color="gray" highContrast size="3">
               Datenschutzerklärung
             </Button>
-          </a>
+          </Link>
           <Separator orientation="vertical" />
-          <a href={getPublicPath('/#agb')}>
+          <Link href="/agb">
             <Button variant="ghost" color="gray" highContrast size="3">
               AGB
             </Button>
-          </a>
+          </Link>
         </div>
       </nav>
     </footer>

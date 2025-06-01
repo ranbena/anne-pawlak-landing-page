@@ -86,11 +86,13 @@
 }
 
 .blob {
-  z-index: -1;
+  background-image: url('/bg_blob_contact.webp');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
+
   position: absolute;
+  z-index: -1;
   inset: 0 0 -50px 50%;
   pointer-events: none;
   opacity: 0.8;
