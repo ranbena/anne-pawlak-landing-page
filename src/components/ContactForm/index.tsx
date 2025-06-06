@@ -55,6 +55,9 @@ const ContactForm = () => {
               className={styles.form}
               id="contact-form"
             >
+              {/* reference: https://support.google.com/docs/thread/3479037?hl=en&msgid=27014483 */}
+              <input hidden name="entry.1571937492" value="1247" readOnly />
+
               <TextField.Root
                 type="text"
                 name="entry.760257597"
